@@ -1,21 +1,13 @@
 const build = [
-  "/_app/start-9b44dda0.js",
-  "/_app/pages/__layout.svelte-227c4612.js",
-  "/_app/error.svelte-2f1d340c.js",
-  "/_app/pages/index.svelte-0ad2ed26.js",
+  "/_app/start-257c1984.js",
+  "/_app/pages/__layout.svelte-0362d954.js",
+  "/_app/error.svelte-a8c84d97.js",
+  "/_app/pages/index.svelte-7bb11de3.js",
   "/_app/assets/pages/index.svelte-3d9eaf0f.css",
-  "/_app/chunks/vendor-e2d7103b.js",
+  "/_app/chunks/vendor-bb1a646d.js",
   "/_app/chunks/preload-helper-e4860ae8.js",
-  "/_app/chunks/i18n-3ba68693.js",
-  "/_app/chunks/en-8b5e0baa.js",
-  "/_app/chunks/fr-1f09aae7.js",
-  "/_app/chunks/ar-5cd39bc3.js",
-  "/_app/chunks/es-70319a01.js",
-  "/_app/chunks/it-953ce87f.js",
-  "/_app/chunks/ja-1c2ba3b4.js",
-  "/_app/chunks/ko-b467ae17.js",
-  "/_app/chunks/ru-5e5e7134.js",
-  "/_app/chunks/zh_Hans-f1b24eff.js"
+  "/_app/chunks/i18n-03b6a7ba.js",
+  "/_app/chunks/en-78632b5a.js"
 ];
 const files = [
   "/favicon.png",
@@ -30,11 +22,11 @@ const files = [
   "/librescore64.png",
   "/librescore72.png",
   "/librescore96.png",
-  "/manifest.json",
+  "/manifest.webmanifest",
   "/smui-dark.css",
   "/smui.css"
 ];
-const version = "1648160336890";
+const version = "1652210592150";
 const worker = self;
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
