@@ -1,1 +1,0 @@
-import{_ as a}from"./preload-helper-e4860ae8.js";import{a4 as o}from"./vendor-bb1a646d.js";const l={loaders:[{locale:"en",key:"",loader:async()=>(await a(()=>import("./en-78632b5a.js"),[])).default}],fallbackLocale:"en"},{t:r,locale:n,locales:s,loading:c,loadTranslations:i}=new o(l);export{i as l,r as t};
