@@ -10,18 +10,18 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-    translate:
+    publish:
         runs-on: ubuntu-latest
         steps:
             - name: Check for new release
               run: |
                   echo "updated=false" >> $GITHUB_ENV
+                  git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/librescore.github.io
                   git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/webmscore-pwa
                   cd $HOME/webmscore-pwa
                   if [[ "$(expr "604800" + "$(git --no-pager log -1 --format="%ct")" - "$(date +%s)")" -gt 0 ]]; then
                       echo "updated=true" >> $GITHUB_ENV
                   fi
-                  git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/librescore.github.io
             - name: Build website
               if: env.updated
               run: |
@@ -47,4 +47,4 @@ jobs:
             - name: Delete workflow run
               if: ${{ !env.updated }}
               run: |
-                curl -i -u ${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }} -d '{"event_type":"delete_action","client_payload":{"run_id":"'"${{ github.run_id }}"'","repo":"LibreScore/librescore.github.io"}}' -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/LibreScore/actions/dispatches
+                  curl -i -u ${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }} -d '{"event_type":"delete_action","client_payload":{"run_id":"'"${{ github.run_id }}"'","repo":"LibreScore/librescore.github.io"}}' -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/LibreScore/actions/dispatches
