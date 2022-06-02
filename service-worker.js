@@ -1,6 +1,6 @@
 const build = [
-  "/_app/start-2671152c.js",
-  "/_app/pages/__layout.svelte-ec30963b.js",
+  "/_app/start-cb3c134d.js",
+  "/_app/pages/__layout.svelte-f93d0720.js",
   "/_app/error.svelte-a8c84d97.js",
   "/_app/pages/index.svelte-8f15098f.js",
   "/_app/assets/pages/index.svelte-3d9eaf0f.css",
@@ -27,7 +27,7 @@ const files = [
   "/smui-dark.css",
   "/smui.css"
 ];
-const version = "1653712052898";
+const version = "1654214283954";
 const worker = self;
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
