@@ -16,20 +16,22 @@ jobs:
             - name: Check for new release
               run: |
                   echo "updated=false" >> $GITHUB_ENV
-                  git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/librescore.github.io
                   git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/webmscore-pwa
                   cd $HOME/webmscore-pwa
                   if [[ "$(expr "604800" + "$(git --no-pager log -1 --format="%ct")" - "$(date +%s)")" -gt 0 ]]; then
                       echo "updated=true" >> $GITHUB_ENV
                   fi
+                  git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/librescore.github.io
             - name: Build website
               if: env.updated
               run: |
+                  cd $HOME/webmscore-pwa
                   npm install
                   npm run build
             - name: Publish website
               if: env.updated
               run: |
+                  cd $HOME/webmscore-pwa
                   mv $HOME/librescore.github.io/.git $HOME/.git
                   mv $HOME/librescore.github.io/README.md $HOME/README.md
                   rm -R $HOME/librescore.github.io/*
