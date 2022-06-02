@@ -1,0 +1,49 @@
+name: Publish new release
+
+on:
+    schedule:
+        - cron: "0 0 * * 0"
+    workflow_dispatch:
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    translate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check for new release
+              run: |
+                  echo "updated=false" >> $GITHUB_ENV
+                  git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/webmscore-pwa
+                  cd $HOME/webmscore-pwa
+                  if [[ "$(expr "604800" + "$(git --no-pager log -1 --format="%ct")" - "$(date +%s)")" -gt 0 ]]; then
+                      echo "updated=true" >> $GITHUB_ENV
+                  fi
+                  git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/librescore.github.io
+            - name: Build website
+              if: env.updated
+              run: |
+                  npm install
+                  npm run build
+            - name: Publish website
+              if: env.updated
+              run: |
+                  mv $HOME/librescore.github.io/.git $HOME/.git
+                  mv $HOME/librescore.github.io/README.md $HOME/README.md
+                  rm -R $HOME/librescore.github.io/*
+                  mv $HOME/.git $HOME/librescore.github.io/.git
+                  mv $HOME/README.md $HOME/librescore.github.io/README.md
+                  mv ./build/app.html ./build/index.html
+                  touch ./build/.nojeykll
+                  mv ./build/* $HOME/librescore.github.io/
+                  cd $HOME/librescore.github.io
+                  git config user.name github-actions
+                  git config user.email github-actions@github.com
+                  git add -A
+                  git commit -m "chore: update translations"
+                  git push
+            - name: Delete workflow run
+              if: ${{ !env.updated }}
+                  curl -i -u ${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }} -d '{"event_type":"delete_action","client_payload":{"run_id":"'"${{ github.run_id }}"'","repo":"LibreScore/librescore.github.io"}}' -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/LibreScore/actions/dispatches
