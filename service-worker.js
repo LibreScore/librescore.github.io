@@ -1,12 +1,12 @@
 const build = [
-  "/_app/immutable/start-b571e659.js",
-  "/_app/immutable/pages/__layout.svelte-7e6b826a.js",
-  "/_app/immutable/error.svelte-b7045106.js",
-  "/_app/immutable/pages/index.svelte-987f89fb.js",
+  "/_app/immutable/start-98bbb6f0.js",
+  "/_app/immutable/pages/__layout.svelte-abbde8cd.js",
+  "/_app/immutable/error.svelte-c7f2338a.js",
+  "/_app/immutable/pages/index.svelte-7e0741f5.js",
   "/_app/immutable/assets/pages/index.svelte-3d9eaf0f.css",
-  "/_app/immutable/chunks/index-a0bdf9f4.js",
-  "/_app/immutable/chunks/preload-helper-34f842fb.js",
-  "/_app/immutable/chunks/SelectionGroupIcon-c3f5fbfc.js",
+  "/_app/immutable/chunks/index-859c72d3.js",
+  "/_app/immutable/chunks/preload-helper-22552618.js",
+  "/_app/immutable/chunks/SelectionGroupIcon-4a2aa475.js",
   "/_app/immutable/chunks/ar-e401cdcd.js",
   "/_app/immutable/chunks/en-6368d7f6.js",
   "/_app/immutable/chunks/ru-3ab918c1.js",
@@ -32,7 +32,7 @@ const files = [
   "/smui-dark.css",
   "/smui.css"
 ];
-const version = "1655081521409";
+const version = "1655603053687";
 const worker = self;
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
