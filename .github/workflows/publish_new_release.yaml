@@ -23,13 +23,13 @@ jobs:
                   fi
                   git -C $HOME clone --single-branch --no-tags --depth=1 https://${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }}@github.com/LibreScore/librescore.github.io
             - name: Build website
-              if: env.updated
+              if: env.updated == 'true'
               run: |
                   cd $HOME/webmscore-pwa
                   npm install
                   npm run build
             - name: Publish website
-              if: env.updated
+              if: env.updated == 'true'
               run: |
                   cd $HOME/webmscore-pwa
                   mv $HOME/librescore.github.io/.git $HOME/.git
@@ -47,6 +47,6 @@ jobs:
                   git commit -m "chore: update translations"
                   git push
             - name: Delete workflow run
-              if: ${{ !env.updated }}
+              if: env.updated == 'false'
               run: |
                   curl -i -u ${{ secrets.LIBRESCORE_USERNAME }}:${{ secrets.LIBRESCORE_TOKEN }} -d '{"event_type":"delete_action","client_payload":{"run_id":"'"${{ github.run_id }}"'","repo":"LibreScore/librescore.github.io"}}' -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/LibreScore/actions/dispatches
