@@ -1,5 +1,5 @@
 const build = [
-  "/_app/immutable/start-bee37d63.js",
+  "/_app/immutable/start-c42739c6.js",
   "/_app/immutable/pages/__layout.svelte-abbde8cd.js",
   "/_app/immutable/error.svelte-c7f2338a.js",
   "/_app/immutable/pages/index.svelte-7e0741f5.js",
@@ -32,7 +32,7 @@ const files = [
   "/smui-dark.css",
   "/smui.css"
 ];
-const version = "1656208060513";
+const version = "1658022782435";
 const worker = self;
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
