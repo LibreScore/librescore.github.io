@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-c42739c6.js",
+    "file": "start-3441ea8f.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -14,13 +14,13 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-abbde8cd.js",
+    "file": "pages/__layout.svelte-32a179fe.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-859c72d3.js",
-      "_SelectionGroupIcon-4a2aa475.js",
+      "_SelectionGroupIcon-4b182d94.js",
       "_preload-helper-22552618.js"
     ]
   },
@@ -34,13 +34,13 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-7e0741f5.js",
+    "file": "pages/index.svelte-65af5f6e.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-859c72d3.js",
-      "_SelectionGroupIcon-4a2aa475.js",
+      "_SelectionGroupIcon-4b182d94.js",
       "_preload-helper-22552618.js"
     ],
     "css": [
@@ -56,8 +56,8 @@
       "_index-859c72d3.js"
     ]
   },
-  "_SelectionGroupIcon-4a2aa475.js": {
-    "file": "chunks/SelectionGroupIcon-4a2aa475.js",
+  "_SelectionGroupIcon-4b182d94.js": {
+    "file": "chunks/SelectionGroupIcon-4b182d94.js",
     "imports": [
       "_preload-helper-22552618.js",
       "_index-859c72d3.js"
@@ -65,6 +65,7 @@
     "dynamicImports": [
       "src/lib/i18n/ar.json",
       "src/lib/i18n/en.json",
+      "src/lib/i18n/hu.json",
       "src/lib/i18n/ru.json",
       "src/lib/i18n/zh-Hans.json"
     ]
@@ -77,6 +78,11 @@
   "src/lib/i18n/en.json": {
     "file": "chunks/en-6368d7f6.js",
     "src": "src/lib/i18n/en.json",
+    "isDynamicEntry": true
+  },
+  "src/lib/i18n/hu.json": {
+    "file": "chunks/hu-f14a4e8e.js",
+    "src": "src/lib/i18n/hu.json",
     "isDynamicEntry": true
   },
   "src/lib/i18n/ru.json": {
