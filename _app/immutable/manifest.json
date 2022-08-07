@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-3441ea8f.js",
+    "file": "start-f5bc0d2e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -14,13 +14,13 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-32a179fe.js",
+    "file": "pages/__layout.svelte-030ded4b.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-859c72d3.js",
-      "_SelectionGroupIcon-4b182d94.js",
+      "_SelectionGroupIcon-c338a88b.js",
       "_preload-helper-22552618.js"
     ]
   },
@@ -34,13 +34,13 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-65af5f6e.js",
+    "file": "pages/index.svelte-957e7fae.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-859c72d3.js",
-      "_SelectionGroupIcon-4b182d94.js",
+      "_SelectionGroupIcon-c338a88b.js",
       "_preload-helper-22552618.js"
     ],
     "css": [
@@ -56,8 +56,8 @@
       "_index-859c72d3.js"
     ]
   },
-  "_SelectionGroupIcon-4b182d94.js": {
-    "file": "chunks/SelectionGroupIcon-4b182d94.js",
+  "_SelectionGroupIcon-c338a88b.js": {
+    "file": "chunks/SelectionGroupIcon-c338a88b.js",
     "imports": [
       "_preload-helper-22552618.js",
       "_index-859c72d3.js"
@@ -71,7 +71,7 @@
     ]
   },
   "src/lib/i18n/ar.json": {
-    "file": "chunks/ar-e401cdcd.js",
+    "file": "chunks/ar-160ec863.js",
     "src": "src/lib/i18n/ar.json",
     "isDynamicEntry": true
   },
@@ -81,17 +81,17 @@
     "isDynamicEntry": true
   },
   "src/lib/i18n/hu.json": {
-    "file": "chunks/hu-f14a4e8e.js",
+    "file": "chunks/hu-b61c1770.js",
     "src": "src/lib/i18n/hu.json",
     "isDynamicEntry": true
   },
   "src/lib/i18n/ru.json": {
-    "file": "chunks/ru-3ab918c1.js",
+    "file": "chunks/ru-ea82ea5e.js",
     "src": "src/lib/i18n/ru.json",
     "isDynamicEntry": true
   },
   "src/lib/i18n/zh-Hans.json": {
-    "file": "chunks/zh-Hans-f610f248.js",
+    "file": "chunks/zh-Hans-d80b7721.js",
     "src": "src/lib/i18n/zh-Hans.json",
     "isDynamicEntry": true
   }
