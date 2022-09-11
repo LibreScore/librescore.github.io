@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-12d12010.js",
+    "file": "start-2f36e865.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -14,13 +14,13 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-7e940dc5.js",
+    "file": "pages/__layout.svelte-c0bf55ad.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-859c72d3.js",
-      "_SelectionGroupIcon-0503445d.js",
+      "_SelectionGroupIcon-d1b6b219.js",
       "_preload-helper-22552618.js"
     ]
   },
@@ -34,13 +34,13 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-88d33adb.js",
+    "file": "pages/index.svelte-64ba161e.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-859c72d3.js",
-      "_SelectionGroupIcon-0503445d.js",
+      "_SelectionGroupIcon-d1b6b219.js",
       "_preload-helper-22552618.js"
     ],
     "css": [
@@ -56,14 +56,15 @@
       "_index-859c72d3.js"
     ]
   },
-  "_SelectionGroupIcon-0503445d.js": {
-    "file": "chunks/SelectionGroupIcon-0503445d.js",
+  "_SelectionGroupIcon-d1b6b219.js": {
+    "file": "chunks/SelectionGroupIcon-d1b6b219.js",
     "imports": [
       "_preload-helper-22552618.js",
       "_index-859c72d3.js"
     ],
     "dynamicImports": [
       "src/lib/i18n/ar.json",
+      "src/lib/i18n/cs.json",
       "src/lib/i18n/en.json",
       "src/lib/i18n/hu.json",
       "src/lib/i18n/ru.json",
@@ -71,27 +72,32 @@
     ]
   },
   "src/lib/i18n/ar.json": {
-    "file": "chunks/ar-68d3a43c.js",
+    "file": "chunks/ar-1521786a.js",
     "src": "src/lib/i18n/ar.json",
     "isDynamicEntry": true
   },
+  "src/lib/i18n/cs.json": {
+    "file": "chunks/cs-7860ff3b.js",
+    "src": "src/lib/i18n/cs.json",
+    "isDynamicEntry": true
+  },
   "src/lib/i18n/en.json": {
-    "file": "chunks/en-e860c338.js",
+    "file": "chunks/en-d36101f4.js",
     "src": "src/lib/i18n/en.json",
     "isDynamicEntry": true
   },
   "src/lib/i18n/hu.json": {
-    "file": "chunks/hu-a5bb6806.js",
+    "file": "chunks/hu-00e8dd33.js",
     "src": "src/lib/i18n/hu.json",
     "isDynamicEntry": true
   },
   "src/lib/i18n/ru.json": {
-    "file": "chunks/ru-ec5291ac.js",
+    "file": "chunks/ru-544f5b62.js",
     "src": "src/lib/i18n/ru.json",
     "isDynamicEntry": true
   },
   "src/lib/i18n/zh-Hans.json": {
-    "file": "chunks/zh-Hans-89b45a6b.js",
+    "file": "chunks/zh-Hans-7d58fe80.js",
     "src": "src/lib/i18n/zh-Hans.json",
     "isDynamicEntry": true
   }
