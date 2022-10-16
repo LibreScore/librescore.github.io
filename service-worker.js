@@ -1,18 +1,18 @@
 const build = [
-  "/_app/immutable/start-66270a5e.js",
-  "/_app/immutable/pages/__layout.svelte-f989aa22.js",
+  "/_app/immutable/start-9230c0d2.js",
+  "/_app/immutable/pages/__layout.svelte-a6327609.js",
   "/_app/immutable/error.svelte-c7f2338a.js",
-  "/_app/immutable/pages/index.svelte-7ef6a627.js",
+  "/_app/immutable/pages/index.svelte-a05be1b6.js",
   "/_app/immutable/assets/pages/index.svelte-3d9eaf0f.css",
   "/_app/immutable/chunks/index-859c72d3.js",
   "/_app/immutable/chunks/preload-helper-22552618.js",
-  "/_app/immutable/chunks/SelectionGroupIcon-411fa0b0.js",
-  "/_app/immutable/chunks/ar-7350d884.js",
-  "/_app/immutable/chunks/cs-ad872e0c.js",
-  "/_app/immutable/chunks/en-01753abc.js",
-  "/_app/immutable/chunks/hu-05b90fc7.js",
-  "/_app/immutable/chunks/ru-b0458bb5.js",
-  "/_app/immutable/chunks/zh-Hans-b018b2ec.js"
+  "/_app/immutable/chunks/SelectionGroupIcon-dbccfa51.js",
+  "/_app/immutable/chunks/ar-6685cd3c.js",
+  "/_app/immutable/chunks/cs-181dffb7.js",
+  "/_app/immutable/chunks/en-3f91444a.js",
+  "/_app/immutable/chunks/hu-a034ec53.js",
+  "/_app/immutable/chunks/ru-d1d0c952.js",
+  "/_app/immutable/chunks/zh-Hans-0da71719.js"
 ];
 const files = [
   "/favicon.png",
@@ -34,7 +34,7 @@ const files = [
   "/smui-dark.css",
   "/smui.css"
 ];
-const version = "1665280683875";
+const version = "1665886337194";
 const worker = self;
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
