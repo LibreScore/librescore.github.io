@@ -1,24 +1,24 @@
 const l = [
   "/_app/immutable/assets/_page-54f4d176.css",
-  "/_app/immutable/start-d3673e86.js",
-  "/_app/immutable/modules/pages/_layout.ts-e4e26074.js",
   "/_app/immutable/chunks/index-7bdd31c0.js",
-  "/_app/immutable/chunks/singletons-76e6fa62.js",
   "/_app/immutable/chunks/preload-helper-41c905a7.js",
-  "/_app/immutable/chunks/0-124f5568.js",
-  "/_app/immutable/chunks/1-0475092b.js",
-  "/_app/immutable/chunks/2-63931e9d.js",
-  "/_app/immutable/components/pages/_layout.svelte-f03cd1bc.js",
-  "/_app/immutable/chunks/_layout-e4a84b88.js",
-  "/_app/immutable/components/error.svelte-84b66d8e.js",
+  "/_app/immutable/chunks/singletons-76e6fa62.js",
   "/_app/immutable/chunks/ar-7c34a115.js",
-  "/_app/immutable/chunks/SelectionGroupIcon-6d755f59.js",
   "/_app/immutable/chunks/cs-776e3f5a.js",
   "/_app/immutable/chunks/en-9ca66af2.js",
+  "/_app/immutable/chunks/2-6ca76b54.js",
+  "/_app/immutable/chunks/1-0475092b.js",
+  "/_app/immutable/modules/pages/_layout.ts-e4e26074.js",
+  "/_app/immutable/components/pages/_layout.svelte-f03cd1bc.js",
   "/_app/immutable/chunks/hu-675aba04.js",
-  "/_app/immutable/chunks/ru-3c9429db.js",
   "/_app/immutable/chunks/zh-Hans-eecbd39c.js",
-  "/_app/immutable/components/pages/_page.svelte-1ea3e8d8.js"
+  "/_app/immutable/chunks/ru-3c9429db.js",
+  "/_app/immutable/chunks/_layout-e4a84b88.js",
+  "/_app/immutable/chunks/0-124f5568.js",
+  "/_app/immutable/start-eebc9735.js",
+  "/_app/immutable/components/error.svelte-84b66d8e.js",
+  "/_app/immutable/chunks/SelectionGroupIcon-6d755f59.js",
+  "/_app/immutable/components/pages/_page.svelte-ffcb3639.js"
 ], u = [
   "/MS Basic.sf3",
   "/favicon.png",
@@ -39,7 +39,7 @@ const l = [
   "/manifest.webmanifest",
   "/smui-dark.css",
   "/smui.css"
-], i = "1673745516856", t = self, p = `cache${i}`, o = l.concat(u), m = new Set(o);
+], i = "1673776394548", t = self, p = `cache${i}`, o = l.concat(u), m = new Set(o);
 t.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(p).then((s) => s.addAll(o)).then(() => {
