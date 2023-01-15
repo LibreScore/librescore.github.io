@@ -1,20 +1,26 @@
-const build = [
-  "/_app/immutable/start-7b081187.js",
-  "/_app/immutable/pages/__layout.svelte-2729f015.js",
-  "/_app/immutable/error.svelte-c7f2338a.js",
-  "/_app/immutable/pages/index.svelte-be585f38.js",
-  "/_app/immutable/assets/pages/index.svelte-3d9eaf0f.css",
-  "/_app/immutable/chunks/index-859c72d3.js",
-  "/_app/immutable/chunks/preload-helper-22552618.js",
-  "/_app/immutable/chunks/SelectionGroupIcon-76dccb12.js",
-  "/_app/immutable/chunks/ar-c93308c0.js",
-  "/_app/immutable/chunks/cs-8fe90f8f.js",
-  "/_app/immutable/chunks/en-1b1ece02.js",
-  "/_app/immutable/chunks/hu-314e6ea7.js",
-  "/_app/immutable/chunks/ru-145b37c8.js",
-  "/_app/immutable/chunks/zh-Hans-e9a20e1f.js"
-];
-const files = [
+const l = [
+  "/_app/immutable/assets/_page-54f4d176.css",
+  "/_app/immutable/start-d3673e86.js",
+  "/_app/immutable/modules/pages/_layout.ts-e4e26074.js",
+  "/_app/immutable/chunks/index-7bdd31c0.js",
+  "/_app/immutable/chunks/singletons-76e6fa62.js",
+  "/_app/immutable/chunks/preload-helper-41c905a7.js",
+  "/_app/immutable/chunks/0-124f5568.js",
+  "/_app/immutable/chunks/1-0475092b.js",
+  "/_app/immutable/chunks/2-63931e9d.js",
+  "/_app/immutable/components/pages/_layout.svelte-f03cd1bc.js",
+  "/_app/immutable/chunks/_layout-e4a84b88.js",
+  "/_app/immutable/components/error.svelte-84b66d8e.js",
+  "/_app/immutable/chunks/ar-7c34a115.js",
+  "/_app/immutable/chunks/SelectionGroupIcon-6d755f59.js",
+  "/_app/immutable/chunks/cs-776e3f5a.js",
+  "/_app/immutable/chunks/en-9ca66af2.js",
+  "/_app/immutable/chunks/hu-675aba04.js",
+  "/_app/immutable/chunks/ru-3c9429db.js",
+  "/_app/immutable/chunks/zh-Hans-eecbd39c.js",
+  "/_app/immutable/components/pages/_page.svelte-1ea3e8d8.js"
+], u = [
+  "/MS Basic.sf3",
   "/favicon.png",
   "/librescore1024.png",
   "/librescore128.png",
@@ -33,51 +39,40 @@ const files = [
   "/manifest.webmanifest",
   "/smui-dark.css",
   "/smui.css"
-];
-const version = "1670116614915";
-const worker = self;
-const ASSETS = `cache${version}`;
-const to_cache = build.concat(files);
-const staticAssets = new Set(to_cache);
-worker.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(ASSETS).then((cache) => cache.addAll(to_cache)).then(() => {
-    worker.skipWaiting();
-  }));
+], i = "1673745516856", t = self, p = `cache${i}`, o = l.concat(u), m = new Set(o);
+t.addEventListener("install", (e) => {
+  e.waitUntil(
+    caches.open(p).then((s) => s.addAll(o)).then(() => {
+      t.skipWaiting();
+    })
+  );
 });
-worker.addEventListener("activate", (event) => {
-  event.waitUntil(caches.keys().then(async (keys) => {
-    for (const key of keys) {
-      if (key !== ASSETS)
-        await caches.delete(key);
-    }
-    worker.clients.claim();
-  }));
+t.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then(async (s) => {
+      for (const a of s)
+        a !== p && await caches.delete(a);
+      t.clients.claim();
+    })
+  );
 });
-async function fetchAndCache(request) {
-  const cache = await caches.open(`offline${version}`);
+async function h(e) {
+  const s = await caches.open(`offline${i}`);
   try {
-    const response = await fetch(request);
-    cache.put(request, response.clone());
-    return response;
-  } catch (err) {
-    const response = await cache.match(request);
-    if (response)
-      return response;
-    throw err;
+    const a = await fetch(e);
+    return s.put(e, a.clone()), a;
+  } catch (a) {
+    const c = await s.match(e);
+    if (c)
+      return c;
+    throw a;
   }
 }
-worker.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET" || event.request.headers.has("range"))
+t.addEventListener("fetch", (e) => {
+  if (e.request.method !== "GET" || e.request.headers.has("range"))
     return;
-  const url = new URL(event.request.url);
-  const isHttp = url.protocol.startsWith("http");
-  const isDevServerRequest = url.hostname === self.location.hostname && url.port !== self.location.port;
-  const isStaticAsset = url.host === self.location.host && staticAssets.has(url.pathname);
-  const skipBecauseUncached = event.request.cache === "only-if-cached" && !isStaticAsset;
-  if (isHttp && !isDevServerRequest && !skipBecauseUncached) {
-    event.respondWith((async () => {
-      const cachedAsset = isStaticAsset && await caches.match(event.request);
-      return cachedAsset || fetchAndCache(event.request);
-    })());
-  }
+  const s = new URL(e.request.url), a = s.protocol.startsWith("http"), c = s.hostname === self.location.hostname && s.port !== self.location.port, n = s.host === self.location.host && m.has(s.pathname), r = e.request.cache === "only-if-cached" && !n;
+  a && !c && !r && e.respondWith(
+    (async () => n && await caches.match(e.request) || h(e.request))()
+  );
 });
