@@ -1,24 +1,24 @@
 const u = [
   "/_app/immutable/assets/_page-54f4d176.css",
-  "/_app/immutable/start-6a0b5472.js",
-  "/_app/immutable/chunks/hu-675aba04.js",
-  "/_app/immutable/chunks/ar-7c34a115.js",
-  "/_app/immutable/modules/pages/_layout.ts-e4e26074.js",
-  "/_app/immutable/chunks/singletons-886c71d9.js",
-  "/_app/immutable/chunks/0-508f1dff.js",
+  "/_app/immutable/chunks/0-bbe47889.js",
   "/_app/immutable/chunks/1-79577567.js",
-  "/_app/immutable/chunks/2-03e9ac0b.js",
-  "/_app/immutable/components/pages/_layout.svelte-728a8bf5.js",
-  "/_app/immutable/chunks/i18n-f3fae792.js",
-  "/_app/immutable/chunks/_layout-e4a84b88.js",
   "/_app/immutable/components/error.svelte-6f16e1f8.js",
-  "/_app/immutable/chunks/ru-3c9429db.js",
-  "/_app/immutable/chunks/zh-Hans-eecbd39c.js",
+  "/_app/immutable/chunks/ru-42354080.js",
+  "/_app/immutable/chunks/zh-Hans-e667d761.js",
+  "/_app/immutable/chunks/hu-fcfc9ecd.js",
+  "/_app/immutable/chunks/en-e367763e.js",
+  "/_app/immutable/chunks/cs-4c70b26b.js",
+  "/_app/immutable/modules/pages/_layout.ts-e4e26074.js",
+  "/_app/immutable/chunks/2-48e1903d.js",
+  "/_app/immutable/chunks/_layout-e4a84b88.js",
+  "/_app/immutable/components/pages/_layout.svelte-ec939344.js",
+  "/_app/immutable/chunks/i18n-b80577d8.js",
+  "/_app/immutable/chunks/ar-1fce2521.js",
   "/_app/immutable/chunks/index-06b9bfde.js",
-  "/_app/immutable/chunks/en-9ca66af2.js",
-  "/_app/immutable/chunks/cs-776e3f5a.js",
+  "/_app/immutable/chunks/singletons-886c71d9.js",
+  "/_app/immutable/start-56bd996a.js",
   "/_app/immutable/chunks/SelectionGroupIcon-b5ff4833.js",
-  "/_app/immutable/components/pages/_page.svelte-e651ca55.js"
+  "/_app/immutable/components/pages/_page.svelte-568c3217.js"
 ], l = [
   "/MS_Basic.sf3",
   "/favicon.png",
@@ -39,7 +39,7 @@ const u = [
   "/manifest.webmanifest",
   "/smui-dark.css",
   "/smui.css"
-], r = "1677976292083", n = (
+], r = "1678580934679", n = (
   /** @type {ServiceWorkerGlobalScope} */
   /** @type {unknown} */
   self
